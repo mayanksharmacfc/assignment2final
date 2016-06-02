@@ -60,10 +60,10 @@ am__make_running_with_option = \
   test $$has_opt = yes
 am__make_dryrun = (target_option=n; $(am__make_running_with_option))
 am__make_keepgoing = (target_option=k; $(am__make_running_with_option))
-pkgdatadir = $(datadir)/assignmentplease
-pkgincludedir = $(includedir)/assignmentplease
-pkglibdir = $(libdir)/assignmentplease
-pkglibexecdir = $(libexecdir)/assignmentplease
+pkgdatadir = $(datadir)/wildcard
+pkgincludedir = $(includedir)/wildcard
+pkglibdir = $(libdir)/wildcard
+pkglibexecdir = $(libexecdir)/wildcard
 am__cd = CDPATH="$${ZSH_VERSION+.}$(PATH_SEPARATOR)" && cd
 install_sh_DATA = $(install_sh) -c -m 644
 install_sh_PROGRAM = $(install_sh) -c
@@ -92,7 +92,7 @@ CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
-am_a_out_OBJECTS = assignmentplease.$(OBJEXT)
+am_a_out_OBJECTS = Wildcard.$(OBJEXT) func.$(OBJEXT)
 a_out_OBJECTS = $(am_a_out_OBJECTS)
 a_out_LDADD = $(LDADD)
 AM_V_P = $(am__v_P_$(V))
@@ -150,19 +150,19 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/sushmitha/git/assignmentplease/missing aclocal-1.14
+ACLOCAL = ${SHELL} /home/sushmitha/git/Wildcard/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
-AUTOCONF = ${SHELL} /home/sushmitha/git/assignmentplease/missing autoconf
-AUTOHEADER = ${SHELL} /home/sushmitha/git/assignmentplease/missing autoheader
-AUTOMAKE = ${SHELL} /home/sushmitha/git/assignmentplease/missing automake-1.14
+AUTOCONF = ${SHELL} /home/sushmitha/git/Wildcard/missing autoconf
+AUTOHEADER = ${SHELL} /home/sushmitha/git/Wildcard/missing autoheader
+AUTOMAKE = ${SHELL} /home/sushmitha/git/Wildcard/missing automake-1.14
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
 CPPFLAGS = 
 CYGPATH_W = echo
-DEFS = -DPACKAGE_NAME=\"assignmentplease\" -DPACKAGE_TARNAME=\"assignmentplease\" -DPACKAGE_VERSION=\"1.0\" -DPACKAGE_STRING=\"assignmentplease\ 1.0\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"assignmentplease\" -DVERSION=\"1.0\"
+DEFS = -DPACKAGE_NAME=\"Wildcard\" -DPACKAGE_TARNAME=\"wildcard\" -DPACKAGE_VERSION=\"1.0\" -DPACKAGE_STRING=\"Wildcard\ 1.0\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"wildcard\" -DVERSION=\"1.0\"
 DEPDIR = .deps
 ECHO_C = 
 ECHO_N = -n
@@ -177,14 +177,14 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = 
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/sushmitha/git/assignmentplease/missing makeinfo
+MAKEINFO = ${SHELL} /home/sushmitha/git/Wildcard/missing makeinfo
 MKDIR_P = /bin/mkdir -p
 OBJEXT = o
-PACKAGE = assignmentplease
+PACKAGE = wildcard
 PACKAGE_BUGREPORT = 
-PACKAGE_NAME = assignmentplease
-PACKAGE_STRING = assignmentplease 1.0
-PACKAGE_TARNAME = assignmentplease
+PACKAGE_NAME = Wildcard
+PACKAGE_STRING = Wildcard 1.0
+PACKAGE_TARNAME = wildcard
 PACKAGE_URL = 
 PACKAGE_VERSION = 1.0
 PATH_SEPARATOR = :
@@ -192,10 +192,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = 
 VERSION = 1.0
-abs_builddir = /home/sushmitha/git/assignmentplease/src
-abs_srcdir = /home/sushmitha/git/assignmentplease/src
-abs_top_builddir = /home/sushmitha/git/assignmentplease
-abs_top_srcdir = /home/sushmitha/git/assignmentplease
+abs_builddir = /home/sushmitha/git/Wildcard/src
+abs_srcdir = /home/sushmitha/git/Wildcard/src
+abs_top_builddir = /home/sushmitha/git/Wildcard
+abs_top_srcdir = /home/sushmitha/git/Wildcard
 ac_ct_CC = gcc
 am__include = include
 am__leading_dot = .
@@ -222,7 +222,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/sushmitha/git/assignmentplease/install-sh
+install_sh = ${SHELL} /home/sushmitha/git/Wildcard/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -246,7 +246,7 @@ target_vendor = unknown
 top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
-a_out_SOURCES = assignmentplease.c
+a_out_SOURCES = Wildcard.c func.c func.h
 all: all-am
 
 .SUFFIXES:
@@ -334,7 +334,8 @@ mostlyclean-compile:
 distclean-compile:
 	-rm -f *.tab.c
 
-include ./$(DEPDIR)/assignmentplease.Po
+include ./$(DEPDIR)/Wildcard.Po
+include ./$(DEPDIR)/func.Po
 
 .c.o:
 	$(AM_V_CC)$(COMPILE) -MT $@ -MD -MP -MF $(DEPDIR)/$*.Tpo -c -o $@ $<
